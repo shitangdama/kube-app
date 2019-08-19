@@ -34,12 +34,20 @@ class ApiService {
         return headers;
     }
 
+    // login
+    async login(params) {
+        const url = `${api.auth}/login`
+        const res = await axios.post(`${api.auth}/login`, params);
+
+        return res.data;
+    }
+
+
     // 测试 获取pods
     async getPods() {
         const token = null
         const url = `${api.pod}`
         const res = await this.apiCall(url, 'GET', token, null);
-        console.log(res.data)
         return res.data["result"];
     }
 }

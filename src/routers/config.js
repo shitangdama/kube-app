@@ -2,7 +2,7 @@ import Init from '../layouts/Init'
 
 import BasicLayout from '../layouts/BasicLayout'
 
-// import Login from '../layout/Login'
+import Login from '../layouts/Login'
 
 import IndexLayout from '../layouts/IndexLayout'
 
@@ -13,6 +13,11 @@ const routes = [
         path: "/",
         exact: true,
         component: Init,
+    },
+    {
+        path: "/login",
+        exact: true,
+        component: Login,
     },
     {
         path: "/dashboard",
@@ -30,7 +35,11 @@ const routes = [
                 ]
             }
         ]
-    }
+    },
+    // {
+        // path: '*',
+        // component: NotFound
+    // }
 ];
 
 export default routes;

@@ -11,7 +11,7 @@ module.exports = override(
     addLessLoader({
         javascriptEnabled: true,
         modifyVars: { 
-            '@primary-color': '#12796B',
+            '@primary-color': '#78909c',
             // '@layout-header-background': '#004D40',
             //'@link-color': '#2196f3',                            // 链接色
             // @success-color: #52c41a;                         // 成功色

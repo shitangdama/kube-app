@@ -6,9 +6,9 @@ class Init extends React.Component {
 
     componentDidMount() {
         // if(this.props.admin.getStatus()) {
-            history.push('/dashboard/pods')
+            // history.push('/dashboard/pods')
         // }else{
-        //     history.push('/login')
+            history.push('/login')
         // }
     }
 

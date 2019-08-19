@@ -48,6 +48,10 @@ export default class SiderMenu extends React.Component {
                         <Icon type="pie-chart" />
                         <span>统计</span>
                     </Menu.Item>
+                    <Menu.Item key="/deployments">
+                        <Icon type="appstore" />
+                        <span>deploy信息</span>
+                    </Menu.Item>
                     <Menu.Item key="/pods">
                         <Icon type="desktop" />
                         <span>pod信息</span>
