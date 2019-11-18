@@ -1,0 +1,45 @@
+---
+kind: pipeline
+type: docker
+name: default
+
+- name: npm-install
+  image: node:13
+  commands:
+    - npm install
+
+- name: build-docker
+  image: plugins/docker
+  settings:
+    registry: registry.shitangdama.cn
+    repo: registry.shitangdama.cn/dama/laki-app
+    dockerfile: Dockerfile
+    username: shitangdama
+    password:
+      from_secret: docker_password
+    tag:
+      - latest
+  when:
+    branch:
+      - master
+
+
+
+# - name: ssh commands
+#   image: appleboy/drone-ssh
+#   settings:
+#     host:
+#       - 118.24.142.70
+#     username: ubuntu
+#     password:
+#       from_secret: ssh_password
+#     port: 22
+#     script:
+#     - cd /home/ubuntu/dama/laki
+#     - docker-compose down
+#     - docker-compose up -d
+
+# volumes:
+#   - name: cache
+#     host:
+#       path: D:\worker\cache
