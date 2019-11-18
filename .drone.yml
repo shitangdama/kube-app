@@ -18,7 +18,20 @@ steps:
   when:
     branch:
       - master
-
+- name: ssh commands
+  image: appleboy/drone-ssh
+  settings:
+    host:
+      - 118.24.142.70
+    username: ubuntu
+    password:
+      from_secret: ssh_password
+    port: 22
+    script:
+    - cd /home/ubuntu/dama/laki-app
+    - docker-compose down
+    - docker rmi registry.shitangdama.cn/dama/laki-app
+    - docker-compose up -d
 
 
 # - name: ssh commands
