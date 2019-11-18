@@ -9,7 +9,6 @@ steps:
   settings:
     registry: registry.shitangdama.cn
     repo: registry.shitangdama.cn/dama/laki-app
-    dockerfile: Dockerfile
     username: shitangdama
     password:
       from_secret: docker_password
