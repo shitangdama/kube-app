@@ -4,11 +4,6 @@ type: docker
 name: default
 
 steps:
-- name: npm-install
-  image: node:13
-  commands:
-    - npm install
-
 - name: build-docker
   image: plugins/docker
   settings:
