@@ -1,8 +1,0 @@
-version: "3"
-services:
-  laki: # Registry Web UI
-    restart: always
-    image: dama/laki-app
-    container_name: laki-app
-    ports:
-      - 127.0.0.1:4000:80

@@ -1,21 +1,21 @@
 import React from 'react';
 // import { inject, observer } from 'mobx-react'
 
-class Init extends React.Component {
+function Init() {
 
-    componentDidMount() {
+    function componentDidMount() {
+
+        let history = useHistory()
         // if(this.props.admin.getStatus()) {
-            // history.push('/dashboard/pods')
+            history.push('/dashboard/pods')
         // }else{
             // history.push('/login')
         // }
-    }
+    };
 
-    render() {
-        return (
-            <div />
-        )
-    }
+    return (
+        <div />
+    )
 }
 
 export default Init;
