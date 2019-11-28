@@ -4,7 +4,14 @@ import './index.less';
 import App from './routers';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+
+import { Provider } from 'mobx-react'
+import store from './store'
+ReactDOM.render(
+  <Provider {...store}>
+    <App />
+  </Provider>,
+document.getElementById('root'));
 
 serviceWorker.unregister();
 
